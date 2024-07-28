@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">StayDream</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hotels">Hotels</string>
+    <string name="hotel_s_name">Hotel\'s Name</string>
+    <string name="location">Location</string>
+    <string name="hotel_s_price">Hotel\'s Price</string>
+    <string name="search_your_next_vacation">Search Your Next Vacation</string>
+    <string name="sign_out">Sign Out</string>
 </resources>

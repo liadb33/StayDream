@@ -38,7 +38,32 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    //firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
+    implementation(libs.firebase.database)
+    
+    //gson
+    implementation (libs.gson)
+
+    //google map & location
+    implementation (libs.play.services.location)
+    implementation (libs.play.services.maps)
+
+    //glide
+    implementation (libs.glide)
+
+    //materialDesign3
+    implementation (libs.material.v190)
+
+    //viewpager2
+    implementation (libs.viewpager2)
+
+
+
+
+
+
 
 }
