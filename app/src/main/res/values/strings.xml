@@ -8,4 +8,25 @@
     <string name="hotel_s_price">Hotel\'s Price</string>
     <string name="search_your_next_vacation">Search Your Next Vacation</string>
     <string name="sign_out">Sign Out</string>
+    <string name="book_now">Book Now</string>
+    <string name="num_of_guests">Num Of Guests</string>
+    <string name="special_requests">Special Requests</string>
+    <string name="book_your_next_vacation">Book Your Next Vacation!</string>
+    <string name="confirm_reservation">Confirm Reservation</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="price">Price</string>
+    <string name="my_reservations">My Reservations</string>
+    <string name="your_reservations">Your Reservations</string>
+    <string name="cancel_reservation">Cancel Reservation</string>
+    <string name="presoton_hotel">Presoton Hotel</string>
+    <string name="dhaka_bangladesh">Dhaka, Bangladesh</string>
+    <string name="_200_00">$200.00</string>
+    <string name="_20_off">20% Off</string>
+    <string name="special_offer">Special Offer</string>
+    <string name="check_in">Check In:</string>
+    <string name="check_out">Check Out:</string>
+    <string name="nickname">Nickname</string>
+    <string name="description">Description</string>
+    <string name="your_favorites">Your Favorites</string>
 </resources>

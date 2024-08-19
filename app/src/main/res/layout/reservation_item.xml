@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/reservation_IMG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@color/black" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reservation_LBL_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Hotel Name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reservation_LBL_checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Check-in: DD/MM/YYYY" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reservation_LBL_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check-out: DD/MM/YYYY" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reservation_guest_num_rooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="2 guests, 1 room" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reservation_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reserved on: DD/MM/YYYY" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reservation_special_TXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Special Requests: None" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reservation_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Total: $XXX.XX" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/reservation_BOOK"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/cancel_reservation"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/blueish"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

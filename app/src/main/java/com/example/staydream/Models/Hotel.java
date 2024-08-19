@@ -1,17 +1,22 @@
 package com.example.staydream.Models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import com.example.staydream.Activities.MainActivity;
 import com.example.staydream.Utilities.LocationManager;
 
 import java.util.Arrays;
+import java.util.List;
 
-public class Hotel {
+public class Hotel implements Parcelable {
+
+   private int hotel_id;
    private String hotel_name;
-
    private String city;
-
    private String addressline1;
    private String country;
    private double longitude;
@@ -30,13 +35,56 @@ public class Hotel {
    private String continent_name;
    private int number_of_reviews;
    private double rating_average;
+   private String overview;
+   private int price;
 
 
    public Hotel(){
+
    }
 
-    public String[] getImageArr() {
-        return new String[]{photo1, photo2, photo3, photo4, photo5};
+
+
+    protected Hotel(Parcel in) {
+        hotel_name = in.readString();
+        city = in.readString();
+        addressline1 = in.readString();
+        country = in.readString();
+        longitude = in.readDouble();
+        latitude = in.readDouble();
+        url = in.readString();
+        checkin = in.readString();
+        checkout = in.readString();
+        numberrooms = in.readInt();
+        numberfloors = in.readInt();
+        yearopened = in.readInt();
+        photo1 = in.readString();
+        photo2 = in.readString();
+        photo3 = in.readString();
+        photo4 = in.readString();
+        photo5 = in.readString();
+        continent_name = in.readString();
+        number_of_reviews = in.readInt();
+        rating_average = in.readDouble();
+        overview = in.readString();
+        hotel_id = in.readInt();
+        price = in.readInt();
+    }
+
+    public static final Creator<Hotel> CREATOR = new Creator<Hotel>() {
+        @Override
+        public Hotel createFromParcel(Parcel in) {
+            return new Hotel(in);
+        }
+
+        @Override
+        public Hotel[] newArray(int size) {
+            return new Hotel[size];
+        }
+    };
+
+    public List<String> getImageList() {
+        return Arrays.asList(photo1, photo2, photo3, photo4, photo5);
     }
 
     public String getCity() {
@@ -45,6 +93,33 @@ public class Hotel {
 
     public Hotel setCity(String city) {
         this.city = city;
+        return this;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public Hotel setPrice(int price) {
+        this.price = price;
+        return this;
+    }
+
+    public String getOverview() {
+        return overview;
+    }
+
+    public Hotel setOverview(String overview) {
+        this.overview = overview;
+        return this;
+    }
+
+    public int getHotel_id() {
+        return hotel_id;
+    }
+
+    public Hotel setHotel_id(int hotel_id) {
+        this.hotel_id = hotel_id;
         return this;
     }
 
@@ -239,5 +314,37 @@ public class Hotel {
                 ", number_of_reviews=" + number_of_reviews +
                 ", rating_average=" + rating_average +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeString(hotel_name);
+        dest.writeString(city);
+        dest.writeString(addressline1);
+        dest.writeString(country);
+        dest.writeDouble(longitude);
+        dest.writeDouble(latitude);
+        dest.writeString(url);
+        dest.writeString(checkin);
+        dest.writeString(checkout);
+        dest.writeInt(numberrooms);
+        dest.writeInt(numberfloors);
+        dest.writeInt(yearopened);
+        dest.writeString(photo1);
+        dest.writeString(photo2);
+        dest.writeString(photo3);
+        dest.writeString(photo4);
+        dest.writeString(photo5);
+        dest.writeString(continent_name);
+        dest.writeInt(number_of_reviews);
+        dest.writeDouble(rating_average);
+        dest.writeString(overview);
+        dest.writeInt(hotel_id);
+        dest.writeInt(price);
     }
 }

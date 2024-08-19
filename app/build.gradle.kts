@@ -43,6 +43,7 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.database)
+    implementation (libs.firebase.ui.auth)
     
     //gson
     implementation (libs.gson)
@@ -59,6 +60,16 @@ dependencies {
 
     //viewpager2
     implementation (libs.viewpager2)
+
+    //circle image view
+    implementation (libs.circleimageview)
+
+    //lottie
+    implementation (libs.lottie)
+
+    //circle indicator
+    implementation (libs.circleindicator)
+
 
 
 

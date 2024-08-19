@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="RoundedCorners">
+    <style name="bottomRoundedCorners">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeBottomRight">24dp</item>
         <item name="cornerSizeBottomLeft">24dp</item>
     </style>
+
+    <style name="roundedCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="roundedTextInputLayout" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+
+    <style name="CustomMaterialCalendarTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/blueish</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="materialCalendarStyle">@style/Custom_MaterialCalendar</item>
+    </style>
+
+    <style name="Custom_MaterialCalendar" parent="@style/Widget.MaterialComponents.MaterialCalendar">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="CustomPopupTheme" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColor">@color/blueish</item>
+    </style>
+
+    <style name="launchTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/launch_screen_background</item>
+    </style>
+
+
+    <style name="FirebaseUI.Custom" parent="FirebaseUI">
+        <item name="colorPrimary">@color/blueish</item>
+        <item name="colorPrimaryDark">@color/blueish</item>
+        <item name="android:background">@color/blueish</item>
+    </style>
+
+
 </resources>

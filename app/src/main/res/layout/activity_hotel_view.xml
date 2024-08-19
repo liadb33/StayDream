@@ -8,7 +8,20 @@
     tools:context=".Activities.HotelViewActivity"
     android:background="@color/white">
 
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/back_button_hotel_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/back_icon"
+        android:background="@color/white"
+        android:layout_marginTop="5dp">
+
+    </androidx.appcompat.widget.AppCompatImageButton>
+
+
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/hotels_TXT_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hotels"
@@ -16,9 +29,10 @@
         android:textStyle="bold"
         android:textSize="25sp"
         android:padding="12dp"
-        android:layout_marginStart="50dp">
+        android:layout_marginStart="40dp">
 
     </com.google.android.material.textview.MaterialTextView>
+
 
     <FrameLayout
         android:id="@+id/hotel_FRAME_list"

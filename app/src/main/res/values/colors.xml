@@ -5,4 +5,8 @@
     <color name="blueish">#0C3A54</color>
     <color name="brownish">#EDBC82</color>
     <color name="grayish">#9499B7</color>
+    <color name="grayTab">#E0E0E0</color>
+    <color name="tabTextGreen">#3f7e74</color>
+    <color name="light_gray">#E8EAF6</color>
 </resources>
+

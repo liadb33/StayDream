@@ -25,21 +25,19 @@ import java.util.List;
 import java.util.Locale;
 
 public class LocationManager {
-
     private static volatile LocationManager instance = null;
     private Context context;
     private FusedLocationProviderClient fusedLocationClient;
     private LocationCallback locationCallback;
     private double latitude;
     private double longitude;
-
     private LocationUpdateCallback locationUpdateCallback;
+
 
     public LocationManager(Context context, LocationUpdateCallback locationUpdateCallback) {
         this.context = context;
         this.locationUpdateCallback = locationUpdateCallback;
         this.fusedLocationClient = LocationServices.getFusedLocationProviderClient(context);
-
     }
 
     public static LocationManager getInstance(){

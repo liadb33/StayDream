@@ -8,8 +8,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.example.staydream.Interface.OnMapAttachCallback;
 import com.example.staydream.R;
@@ -21,7 +23,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapFragment extends Fragment {
-
 
     private OnMapAttachCallback onMapAttachCallback;
     public MapFragment() {
@@ -37,7 +38,26 @@ public class MapFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_map, container, false);
-        return view;
+
+        FrameLayout touchInterceptor = new FrameLayout(requireContext()) {
+            @Override
+            public boolean dispatchTouchEvent(MotionEvent ev) {
+                switch (ev.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        //disallow parent ScrollView to intercept touch events
+                        getParent().requestDisallowInterceptTouchEvent(true);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        //allow parent ScrollView to intercept touch events
+                        getParent().requestDisallowInterceptTouchEvent(false);
+                        break;
+                }
+                return super.dispatchTouchEvent(ev);
+            }
+        };
+
+        touchInterceptor.addView(view);
+        return touchInterceptor;
     }
 
     @Override

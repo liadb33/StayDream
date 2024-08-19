@@ -16,30 +16,45 @@
         android:icon="@drawable/staydream_door_icon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/staydream_door_icon"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/Theme.StayDream"
         tools:targetApi="31">
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY"/>
-
         <activity
-            android:name=".Activities.AboutHotelActivity"
+            android:name=".Activities.FavoriteHotelActivity"
             android:exported="false" />
-
         <activity
-            android:name=".Activities.HotelViewActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.MainActivity"
-            android:exported="true">
+            android:name=".Activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/launchTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activities.UserReservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ReserveHotelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY" />
+
+        <activity
+            android:name=".Activities.AboutHotelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.HotelViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Activities.MainActivity">
 
@@ -28,30 +29,165 @@
 
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/main_user_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Your Favorites"
+        android:layout_marginStart="235dp"
+        android:layout_marginTop="95dp"
+        android:backgroundTint="@color/brownish"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/main_user_reservation"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="@string/my_reservations"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="@color/brownish"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/main_SIGN_OUT"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:text="@string/sign_out"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="85dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/brownish"/>
 
-    <com.google.android.material.search.SearchBar
-        android:id="@+id/main_BAR_search"
+    <androidx.cardview.widget.CardView
         android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:hint="Search By Location/Hotel's Name"
-        android:layout_marginLeft="50dp"
-        android:layout_marginVertical="200dp">
-
-    </com.google.android.material.search.SearchBar>
-
-    <com.google.android.material.search.SearchView
-        android:id="@+id/main_searchView"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginVertical="200dp"
-        />
-    
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="24dp"
+        app:cardBackgroundColor="#f2f2f2"
+        app:cardElevation="2dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/search__1_"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/search_bar_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Search By Location/Hotel's Name"
+                android:textSize="16sp"
+                android:textColorHint="#757575"
+                android:background="@null"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:layout_marginStart="16dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_LLC_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="280dp"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/from_date_layout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:hintTextColor="@color/blueish"
+            app:startIconDrawable="@drawable/calendar"
+            app:startIconTint="@null"
+            android:hint="@string/from"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:shapeAppearance="@style/roundedTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/from_date_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:paddingStart="40dp"
+                tools:ignore="RtlSymmetry" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/to_date_layout"
+            android:layout_width="180dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/light_gray"
+            app:startIconDrawable="@drawable/calendar"
+            app:startIconTint="@null"
+            android:hint="@string/to"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:shapeAppearance="@style/roundedTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/to_date_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:paddingStart="40dp"
+                tools:ignore="RtlSymmetry" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/main_guest_number"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:shapeAppearance="@style/roundedTextInputLayout"
+        android:layout_marginTop="360dp"
+        app:boxBackgroundColor="@color/white"
+        android:textColorHint="@color/blueish"
+        app:endIconTint="@color/blueish"
+        app:boxStrokeColor="@color/blueish"
+        app:hintTextColor="@color/black"
+        android:hint="@string/num_of_guests">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoComplete_guest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blueish"
+            android:inputType="none"
+            android:dropDownHeight="150dp"
+            android:popupTheme="@style/CustomPopupTheme"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/special_offer"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="20dp"/>
+
+    <FrameLayout
+        android:id="@+id/main_special_offer_FRAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp">
+    </FrameLayout>
 
 </RelativeLayout>

@@ -33,8 +33,6 @@ public class ImageSliderAdapter extends RecyclerView.Adapter<ImageSliderAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
-
-//        Log.d("PHOTOS URL", imageUrls[position] + "  ");
         ImageLoader.getInstance().load(imageUrls[position],holder.image_SLD_item);
     }
     
