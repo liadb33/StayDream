@@ -42,3 +42,6 @@ The project is structured into several key components:
 The project uses Firebase for:
 - **User Authentication**
 - **Realtime Database** for storing hotel information
+
+<img width="2768" alt="StayDream_picture" src="https://github.com/user-attachments/assets/519fb03d-68e9-4661-9a80-ec774278d2af">
+
