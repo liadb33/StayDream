@@ -36,7 +36,7 @@ The project is structured into several key components:
 - **HotelList**: Represents a list of hotels
 
 ## Data Management
-- **HotelDataManager**: Handles data operations related to hotels, including saving and retrieving from Firebase
+- **DataManager**: Handles data operations related to hotels, including saving and retrieving from Firebase
 
 ## Firebase Integration
 The project uses Firebase for:
