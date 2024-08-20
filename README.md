@@ -1,6 +1,6 @@
 # StayDream
 
-**StayDream** is an Android application for hotel booking and management. It uses Firebase for authentication and data storage.
+**StayDream** is an Android application for hotel booking and management. It uses Firebase for authentication and data storage, Material Design 3 and other dynamic UI components
 
 ## Features
 - **User authentication** using Firebase Authentication
