@@ -60,5 +60,7 @@ To get started with StayDream:
 3. Set up a Firebase project and add the `google-services.json` file to the app directory
 4. Build and run the application on an emulator or physical device
 
+[![StayDream App Demo](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=TKynWeL1QcU)
+
 <img width="2768" alt="StayDream_picture" src="https://github.com/user-attachments/assets/519fb03d-68e9-4661-9a80-ec774278d2af">
 
