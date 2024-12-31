@@ -16,7 +16,7 @@ StayDream is an Android application for hotel booking and management, offering a
 
 
 
-### Video Showcase!
+### StayDream In Action
 https://github.com/user-attachments/assets/07a18c47-9f6d-4dc1-8504-871d5166d662
 
 
